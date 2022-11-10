@@ -1,7 +1,6 @@
 	program matriks
 	integer:: i, j
-	real:: result
-	real, dimension(3,3):: matA, matB
+	real, dimension(3,3):: matA, matB, res
 
 	write(*,*) 'Masukkan nilai matriks A:'
  
@@ -27,6 +26,12 @@
 	do i=1,3
 	write(*,*) (matB (i,j), j=1,3) 
 	enddo
+
+	res(i,j) = (matA(i,j)-matB(i,j))
+	do i=1,3
+		write(*,*) (res(i,j), j=1,3) 
+	enddo
+
 
 
 	end
