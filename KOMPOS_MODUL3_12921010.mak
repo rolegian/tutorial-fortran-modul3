@@ -4,25 +4,25 @@
 # TARGTYPE "Win32 (x86) Console Application" 0x0103
 
 !IF "$(CFG)" == ""
-CFG=KOMPOS_MOODUL3_12921010 - Win32 Debug
-!MESSAGE No configuration specified.  Defaulting to KOMPOS_MOODUL3_12921010 -\
+CFG=KOMPOS_MODUL3_12921010 - Win32 Debug
+!MESSAGE No configuration specified.  Defaulting to KOMPOS_MODUL3_12921010 -\
  Win32 Debug.
 !ENDIF 
 
-!IF "$(CFG)" != "KOMPOS_MOODUL3_12921010 - Win32 Release" && "$(CFG)" !=\
- "KOMPOS_MOODUL3_12921010 - Win32 Debug"
+!IF "$(CFG)" != "KOMPOS_MODUL3_12921010 - Win32 Release" && "$(CFG)" !=\
+ "KOMPOS_MODUL3_12921010 - Win32 Debug"
 !MESSAGE Invalid configuration "$(CFG)" specified.
 !MESSAGE You can specify a configuration when running NMAKE on this makefile
 !MESSAGE by defining the macro CFG on the command line.  For example:
 !MESSAGE 
-!MESSAGE NMAKE /f "KOMPOS_MOODUL3_12921010.mak"\
- CFG="KOMPOS_MOODUL3_12921010 - Win32 Debug"
+!MESSAGE NMAKE /f "KOMPOS_MODUL3_12921010.mak"\
+ CFG="KOMPOS_MODUL3_12921010 - Win32 Debug"
 !MESSAGE 
 !MESSAGE Possible choices for configuration are:
 !MESSAGE 
-!MESSAGE "KOMPOS_MOODUL3_12921010 - Win32 Release" (based on\
+!MESSAGE "KOMPOS_MODUL3_12921010 - Win32 Release" (based on\
  "Win32 (x86) Console Application")
-!MESSAGE "KOMPOS_MOODUL3_12921010 - Win32 Debug" (based on\
+!MESSAGE "KOMPOS_MODUL3_12921010 - Win32 Debug" (based on\
  "Win32 (x86) Console Application")
 !MESSAGE 
 !ERROR An invalid configuration is specified.
@@ -35,10 +35,10 @@ NULL=nul
 !ENDIF 
 ################################################################################
 # Begin Project
-F90=fl32.exe
 RSC=rc.exe
+F90=fl32.exe
 
-!IF  "$(CFG)" == "KOMPOS_MOODUL3_12921010 - Win32 Release"
+!IF  "$(CFG)" == "KOMPOS_MODUL3_12921010 - Win32 Release"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 0
@@ -47,11 +47,11 @@ RSC=rc.exe
 OUTDIR=.
 INTDIR=.
 
-ALL : "$(OUTDIR)\KOMPOS_MOODUL3_12921010.exe"
+ALL : "$(OUTDIR)\KOMPOS_MODUL3_12921010.exe"
 
 CLEAN : 
-	-@erase ".\KOMPOS_MOODUL3_12921010.exe"
-	-@erase ".\KOMPOS_MOODUL3_12921010.obj"
+	-@erase ".\KOMPOS_MODUL3_12921010.exe"
+	-@erase ".\KOMPOS_MODUL3_12921010.obj"
 
 # ADD BASE F90 /Ox /c /nologo
 # ADD F90 /Ox /c /nologo
@@ -61,24 +61,23 @@ F90_PROJ=/Ox /c /nologo
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
-BSC32_FLAGS=/nologo /o"$(OUTDIR)/KOMPOS_MOODUL3_12921010.bsc" 
+BSC32_FLAGS=/nologo /o"$(OUTDIR)/KOMPOS_MODUL3_12921010.bsc" 
 BSC32_SBRS=
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib /nologo /subsystem:console /machine:I386
 # ADD LINK32 kernel32.lib /nologo /subsystem:console /machine:I386
 LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:no\
- /pdb:"$(OUTDIR)/KOMPOS_MOODUL3_12921010.pdb" /machine:I386\
- /out:"$(OUTDIR)/KOMPOS_MOODUL3_12921010.exe" 
+ /pdb:"$(OUTDIR)/KOMPOS_MODUL3_12921010.pdb" /machine:I386\
+ /out:"$(OUTDIR)/KOMPOS_MODUL3_12921010.exe" 
 LINK32_OBJS= \
-	"$(INTDIR)/KOMPOS_MOODUL3_12921010.obj"
+	"$(INTDIR)/KOMPOS_MODUL3_12921010.obj"
 
-"$(OUTDIR)\KOMPOS_MOODUL3_12921010.exe" : "$(OUTDIR)" $(DEF_FILE)\
- $(LINK32_OBJS)
+"$(OUTDIR)\KOMPOS_MODUL3_12921010.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
   $(LINK32_FLAGS) $(LINK32_OBJS)
 <<
 
-!ELSEIF  "$(CFG)" == "KOMPOS_MOODUL3_12921010 - Win32 Debug"
+!ELSEIF  "$(CFG)" == "KOMPOS_MODUL3_12921010 - Win32 Debug"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 1
@@ -87,35 +86,34 @@ LINK32_OBJS= \
 OUTDIR=.
 INTDIR=.
 
-ALL : "$(OUTDIR)\KOMPOS_MOODUL3_12921010.exe"
+ALL : "$(OUTDIR)\KOMPOS_MODUL3_12921010.exe"
 
 CLEAN : 
-	-@erase ".\KOMPOS_MOODUL3_12921010.exe"
-	-@erase ".\KOMPOS_MOODUL3_12921010.obj"
-	-@erase ".\KOMPOS_MOODUL3_12921010.ilk"
-	-@erase ".\KOMPOS_MOODUL3_12921010.pdb"
+	-@erase ".\KOMPOS_MODUL3_12921010.exe"
+	-@erase ".\KOMPOS_MODUL3_12921010.obj"
+	-@erase ".\KOMPOS_MODUL3_12921010.ilk"
+	-@erase ".\KOMPOS_MODUL3_12921010.pdb"
 
 # ADD BASE F90 /Zi /c /nologo
 # ADD F90 /Zi /c /nologo
-F90_PROJ=/Zi /c /nologo /Fd"KOMPOS_MOODUL3_12921010.pdb" 
+F90_PROJ=/Zi /c /nologo /Fd"KOMPOS_MODUL3_12921010.pdb" 
 # ADD BASE RSC /l 0x409 /d "_DEBUG"
 # ADD RSC /l 0x409 /d "_DEBUG"
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
-BSC32_FLAGS=/nologo /o"$(OUTDIR)/KOMPOS_MOODUL3_12921010.bsc" 
+BSC32_FLAGS=/nologo /o"$(OUTDIR)/KOMPOS_MODUL3_12921010.bsc" 
 BSC32_SBRS=
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib /nologo /subsystem:console /debug /machine:I386
 # ADD LINK32 kernel32.lib /nologo /subsystem:console /debug /machine:I386
 LINK32_FLAGS=kernel32.lib /nologo /subsystem:console /incremental:yes\
- /pdb:"$(OUTDIR)/KOMPOS_MOODUL3_12921010.pdb" /debug /machine:I386\
- /out:"$(OUTDIR)/KOMPOS_MOODUL3_12921010.exe" 
+ /pdb:"$(OUTDIR)/KOMPOS_MODUL3_12921010.pdb" /debug /machine:I386\
+ /out:"$(OUTDIR)/KOMPOS_MODUL3_12921010.exe" 
 LINK32_OBJS= \
-	"$(INTDIR)/KOMPOS_MOODUL3_12921010.obj"
+	"$(INTDIR)/KOMPOS_MODUL3_12921010.obj"
 
-"$(OUTDIR)\KOMPOS_MOODUL3_12921010.exe" : "$(OUTDIR)" $(DEF_FILE)\
- $(LINK32_OBJS)
+"$(OUTDIR)\KOMPOS_MODUL3_12921010.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
   $(LINK32_FLAGS) $(LINK32_OBJS)
 <<
@@ -134,21 +132,21 @@ LINK32_OBJS= \
 ################################################################################
 # Begin Target
 
-# Name "KOMPOS_MOODUL3_12921010 - Win32 Release"
-# Name "KOMPOS_MOODUL3_12921010 - Win32 Debug"
+# Name "KOMPOS_MODUL3_12921010 - Win32 Release"
+# Name "KOMPOS_MODUL3_12921010 - Win32 Debug"
 
-!IF  "$(CFG)" == "KOMPOS_MOODUL3_12921010 - Win32 Release"
+!IF  "$(CFG)" == "KOMPOS_MODUL3_12921010 - Win32 Release"
 
-!ELSEIF  "$(CFG)" == "KOMPOS_MOODUL3_12921010 - Win32 Debug"
+!ELSEIF  "$(CFG)" == "KOMPOS_MODUL3_12921010 - Win32 Debug"
 
 !ENDIF 
 
 ################################################################################
 # Begin Source File
 
-SOURCE=.\KOMPOS_MOODUL3_12921010.for
+SOURCE=.\KOMPOS_MODUL3_12921010.for
 
-"$(INTDIR)\KOMPOS_MOODUL3_12921010.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\KOMPOS_MODUL3_12921010.obj" : $(SOURCE) "$(INTDIR)"
 
 
 # End Source File
